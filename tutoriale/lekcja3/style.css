@@ -1,0 +1,88 @@
+body  /*body piszemy bez kropki - to nie jest klasa!*/
+{
+	background-color: #000000;
+	color: lightgray;  /*kolor tekstu*/
+	font-size: 28px;
+	font-family: 'Inconsolata';
+	font-weight:700;
+	
+}
+/* id "pojemnik" - #pojemnik. klasa "pojemnik - .pojemnik*/
+#pojemnik
+{
+	width: 1080px;
+	margin-left: auto;
+	margin-right:auto;
+	
+}
+
+#plansza
+{
+	width: 1080px;
+	margin-top:50px;
+	margin-bottom: 50px;
+	text-align: center;
+	font-size:48px;
+	min-height: 60px;
+	
+}
+
+#szubienica
+{
+	float:left;
+	width:540px;
+	text-align:center;
+	min-height: 360px;
+
+}
+
+#alfabet
+
+{
+	float:left;
+	width:540px;
+	text-align:center;
+	min-height: 360px;
+}
+
+
+.litera
+{
+	width: 30px;
+	height: 30px;
+	text-align:center;
+	padding: 5px;
+	margin: 5px;
+	border: 3px solid gray;
+	float:left;
+	cursor: pointer;
+	border-radius: 12px;
+	
+}
+
+
+.litera:hover
+{
+	background-color: #222222;
+	color:white;
+	border: 3px, solid white;	
+}
+
+.reset
+{
+	color:green;
+	cursor:pointer;
+	font-size: 48px;
+	border: 3px solid white;
+	border-radius: 15px;
+	padding:10px;
+	
+}
+
+
+.reset:hover
+{
+	color:white;
+}
+
+

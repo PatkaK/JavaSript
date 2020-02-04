@@ -1,0 +1,57 @@
+<!DOCTYPE  html>
+
+
+<html lang ="pl">
+<head>
+<meta charset="utf-8">
+
+	<style>
+	body{
+	background-color: #FF1493;
+	font-size: 18px;
+	color:white;
+	}
+	
+	.center{
+	text-align:center; padding: 10px 0;
+	}
+	
+	</style>
+	
+	
+	<script type="text/javascript">
+	
+	function znajdz()
+	{
+		var szuk = document.getElementById("pole").value;
+		var tekst = document.getElementById("teksty").textContent;
+		var wynik = tekst.indexOf(szuk) === -1 ? "dupa (nie ma takiego słowa)" : tekst.indexOf(szuk);
+		
+		document.getElementById("demo").innerHTML = wynik;
+	
+	}
+	
+	</script>
+
+</head>
+
+<body >
+
+<h1>Randomowy tekst</h1>
+<p id="teksty">Kiedy miałem 23 lata zdiagnozowano u mnie ADHD, ale to nie oznacza, że przed tym nie miałem żadnych objawów. Patrząc wstecz, muszę powiedzieć, że były one dość widoczne. Byłem nadpobudliwy zarówno fizycznie, jak psychicznie i emocjonalnie. Miałem problemy z planowaniem, ustalaniem priorytetów, zarządzaniem czasem i koncentrowaniem się na konkretnych czynnościach. Wiecie, które z tych umiejętności są potrzebne, by osiągać sukcesy w szkole i na studiach? Tak, zgadliście: wszystkie. Mówili: “utalentowany, ale leniwy”. Nauczyciele i rodzice naciskali mnie coraz mocniej, ale większa presja oznaczała jeszcze większą destabilizację i moje objawy jeszcze bardziej się nasilały. I tak w kółko. Każdego dnia słyszałem, że powinienem być jak każdy inny. Powinienem się zachowywać jak ci lepsi uczniowie i brać od nich przykład. Nie chodzi o to, że się nie starałem. Starałem się bardzo, po prostu nie byłem zdolny do wykonywania niektórych czynności. Im bardziej próbowałem, tym szybciej pojawiały się kolejne klęski. Zmieniałem szkoły, potem studia - w swoim życiu rzuciłem cztery różne kierunki studiów na czterech różnych uczelniach. Do dzisiaj mam tylko średnie wykształcenie. Autyzm również nie pomagał. Nieumiejętność rozpoznawania emocji innych dość mocno ograniczyła możliwość budowania relacji międzyludzkich. Nawet do dzisiaj nie mam zbyt wiele przyjaciół z okresu mojej młodości, czy nawet wieku nastoletniego.</p>
+
+</br>
+	<div class=center>
+	
+	<input type="text" id="pole"/>	
+	<button onclick="znajdz()" style=cursor:pointer;>szukaj</button> 
+	</br>
+	<p> Szukane słowo rozpoczyna się </p>
+	<div id="demo"></div>
+	<p> literą w caaałym tekście</p>
+	
+	</div>
+
+</body>
+
+</html>

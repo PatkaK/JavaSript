@@ -1,0 +1,57 @@
+Zadanie #3 - Slider wydaje się działać poprawnie po uwzględnieniu w kodzie poniższych poprawek:
+
+   var timer1 = 0;
+
+   var timer2 = 0;
+
+   var timer3 = 0;                             // utworzenie nowej zmiennej do identyfikacji timera w funkcji ustawslajd()
+
+   
+
+   function ustawslajd(nrslajdu)
+
+   {
+
+      clearTimeout(timer1);
+
+      clearTimeout(timer2);
+
+      numer = nrslajdu - 1;
+
+      schowaj();
+
+      timer3 = setTimeout("zmienslajd()", 500); 
+           // przyporządkowanie zmiennej timer3 do setTimeout()
+    }
+   
+
+   function schowaj()
+
+   {
+
+      $("#slider").stop();
+                            // zatrzymanie bieżącego efektu slidera przed wywołaniem fadeOut()                           
+      $("#slider").fadeOut(500);
+
+   }
+
+  
+
+   function zmienslajd()
+
+   {
+
+      clearTimeout(timer3);                                                                                      // przerwanie odliczania timera 3
+      numer++; if (numer>5) numer=1;    
+
+      var plik = "<img src=\"slajdy/slajd" + numer + ".png\" />";    
+
+      document.getElementById("slider").innerHTML = plik;
+
+      $("#slider").fadeIn(500);    
+
+      timer1 = setTimeout("zmienslajd()", 5000);
+
+      timer2 = setTimeout("schowaj()", 4500);   
+
+   }

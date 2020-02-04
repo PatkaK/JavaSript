@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset = "utf-8"/>
+	<title>Kolory</title>
+	<script type="text/javascript">
+	
+
+	
+	function choice(){
+	
+	var dane = document.getElementById("p1").value;
+	
+		switch (dane){
+			default:
+				document.write("Nie znam takiego koloru"); break;
+			case "żółty" : document.body.style.backgroundColor="yellow"; document.getElementsByTagName("p")[0, 1].style.color="black";break;
+			case "niebieski" : document.body.style.backgroundColor="blue";document.getElementsByTagName("p")[0,1].style.color="green";break;
+			case "zielony" : document.body.style.backgroundColor="green"; document.getElementsByTagName("p")[0].style.color="white";break;
+			case "czarny" : document.body.style.backgroundColor="black"; document.getElementsByTagName("p")[0].style.color="white";  break;
+			case "fioletowy" : document.body.style.backgroundColor="#6a0dad"; document.getElementsByTagName("p")[0].style.color="yellow";break;
+			case "brązowy" : document.body.style.backgroundColor="#654321"; document.getElementsByTagName("p")[0].style.color="white"; break;
+
+		}
+	}
+	
+	function sayHello(){
+		let name = document.getElementById("imie").value;
+		alert ("Hejka "+name);
+	}
+	
+	
+	</script>
+	
+</head>
+<body>
+	
+	<p>Podaj swoje imię</p>
+	<input type="text" id="imie" value="Tomek"/>
+	<input type="submit" onclick="sayHello()" value="OK"/>
+	
+	<p> Wpisz kolor </p>
+	<input type="text" id="p1"/> 
+	<button onclick = "choice()">OK</button><br/><br/>
+
+
+</body>
+
+</html>
