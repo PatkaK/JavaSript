@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <script> 
+function start()
+{
+	var tresc_diva="";
+	
+	for(i=0; i<20; i++){	
+		var element = "lit" + i;	
+		tresc_diva = tresc_diva + '<div class="numer" onclick= "sprawdz('+i+')" id="'+element+'">'+i+'</div>';
+	}
+	
+	document.getElementById("liczby").innerHTML= tresc_diva;	
+}
+
+function sprawdz(nr){
+    alert(nr);
+}
+
+var karty = ["c0", "c1", "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10"];
+
+for (i=0; i<karty.length; i++) {
+	
+	karty[i] = document.getElementById('c'+i);
+}
+
+function echo(){
+c0.innerHTML="zero"}
+
+
+
+        </script>
+
+    </head>
+    <body onload="start()">
+      	
+	<div id="pojemnik">
+	
+		<div id="liczby"></div>
+		
+		<div id ="c0" onclick= "echo()">aaa</div>
+		<div id ="c1">bbb</div>
+		<div id ="c2">ccc</div>
+		
+	
+    </div>
+    
+    </body>
+
+</html>
